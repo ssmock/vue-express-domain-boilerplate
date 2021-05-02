@@ -2,17 +2,20 @@
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
     <RemoteResourceDemo />
+    <MarkdownDemo />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import RemoteResourceDemo from "./components/RemoteResourceDemo.vue";
+import MarkdownDemo from "./components/MarkdownDemo.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     RemoteResourceDemo,
+    MarkdownDemo
   },
 });
 </script>
