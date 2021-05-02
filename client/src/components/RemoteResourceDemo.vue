@@ -22,6 +22,10 @@ type Demo = {
   remote: RemoteResource<Thing>;
 };
 
+/**
+ * Shows how to load remote resources, and provide user feedback during
+ * and after processing
+ */
 export default defineComponent({
   components: {
     RemoteLock
