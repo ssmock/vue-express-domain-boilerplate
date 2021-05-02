@@ -16,7 +16,7 @@ import { Thing } from "../../../domain/Thing";
 import { RemoteResource, RemoteResources } from "../types/RemoteResource";
 import RemoteLock from "./RemoteLock.vue";
 
-type Hello = {
+type Demo = {
   a: string;
   thing: Thing;
   remote: RemoteResource<Thing>;
@@ -26,11 +26,11 @@ export default defineComponent({
   components: {
     RemoteLock
   },
-  name: "HelloWorld",
+  name: "RemoteResourceDemo",
   data() {
     return {
       remote: RemoteResources.fresh(),
-    } as Hello;
+    } as Demo;
   },
   created() {
     this.fetchSlow();
