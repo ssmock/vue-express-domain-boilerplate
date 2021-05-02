@@ -6,16 +6,20 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { RemoteResource, RemoteResources } from "../types/RemoteResource";
+import { defineComponent } from "vue";
+import { RemoteResource } from "../types/RemoteResource";
 
-export default Vue.component("RemoteLock", {
+/**
+ * Disables wrapped elements when the given resource is in flight.
+ */
+export default defineComponent({
+  name: "RemoteLock",
   props: ["resource"],
   data() {
     return { };
   },
   computed: {
-    disabled() {
+    disabled(): boolean {
       return (this.resource as RemoteResource<any>).pending;
     }
   }
