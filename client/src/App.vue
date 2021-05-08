@@ -2,7 +2,10 @@
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
     <RemoteResourceDemo />
+    <hr />
     <MarkdownDemo />
+    <hr />
+    <WebsocketDemo />
   </div>
 </template>
 
@@ -10,12 +13,14 @@
 import { defineComponent } from "vue";
 import RemoteResourceDemo from "./components/RemoteResourceDemo.vue";
 import MarkdownDemo from "./components/MarkdownDemo.vue";
+import WebsocketDemo from "./components/WebsocketDemo.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     RemoteResourceDemo,
-    MarkdownDemo
+    MarkdownDemo,
+    WebsocketDemo
   },
 });
 </script>
