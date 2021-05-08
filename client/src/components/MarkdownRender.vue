@@ -1,5 +1,5 @@
 <template>
-    <div v-html="compiledMarkdown"></div>
+  <div v-html="compiledMarkdown"></div>
 </template>
 
 <script lang="ts">
@@ -15,16 +15,16 @@ export default defineComponent({
   name: "MarkdownRender",
   props: ["src"],
   data() {
-    return { };
+    return {};
   },
   computed: {
     compiledMarkdown(): string {
       const { src } = this.$props;
 
       return marked(src as string);
-    }
-  }
-})
+    },
+  },
+});
 </script>
 
 <style>
